@@ -3,13 +3,13 @@
 This is Codeinterpreter-codebox, a cloud service for executing Code Interpreter code.
 
 # Features
-1. **Independent Jupyter Sandbox Environment**  
+1. 🐍 **Independent Jupyter Sandbox Environment**  
 A completely isolated Jupyter sandbox environment that supports state-preserving code execution. Supports file uploads and downloads.
-2. **Dockerized One-click Deployment**  
-3. **Completely Free and Open Source**  
-4. **Information Security**  
+2. 🐳 **Dockerized One-click Deployment**  
+3. 🌐 **Completely Free and Open Source**  
+4. 🛡️ **Information Security**  
 Supports completely private deployments without the need to upload files to external servers.
-5. **More Flexible**  
+5. 🚀 **More Flexible**  
 Supports the opening of more ports to achieve more custom functionality requirements, such as: connecting to databases, connecting to the internet, connecting to other servers.
 
 ## Function Descriptions
