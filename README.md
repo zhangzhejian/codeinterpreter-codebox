@@ -1,6 +1,6 @@
 # Codeinterpreter-Codebox
 
-Welcome to Codeinterpreter-codebox, a cutting-edge cloud service tailored for executing Code Interpreter code.
+Welcome to Codeinterpreter-Codebox, a cutting-edge cloud service tailored for executing Code Interpreter code.
 
 ## 📜 Table of Contents
 - [🎯 Key Features](#-key-features)
