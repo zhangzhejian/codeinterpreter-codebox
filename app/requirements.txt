@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+docker
+python-multipart
+pydantic
+execnet

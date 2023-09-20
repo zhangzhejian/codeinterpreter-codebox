@@ -1,0 +1,54 @@
+
+# Ignore the virtual environment directory
+venv/
+# process
+*.pid
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Ignore the pycache directory
+__pycache__/
+*/__pycache__/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore logs files
+*.log
+
+# Ignore database files
+*.sqlite3
+
+# Ignore IDE-specific files (e.g., for VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Ignore any compiled binaries or executables
+*.exe
+*.dll
+*.so
+*.out
+
+# Ignore the output of your build tools
+/build/
+
+# Ignore any dependency lock files
+*.lock
+
+# Ignore any temporary files or backups
+*.tmp
+*~
+*.bak
+
+# Ignore node_modules directory (if using Node.js)
+node_modules/
+
+# Ignore .env files with sensitive data
+.env
+
+# Ignore any compiled CSS or JavaScript files (if applicable)
+*.css
+*.js

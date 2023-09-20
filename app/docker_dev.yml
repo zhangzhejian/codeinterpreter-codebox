@@ -1,0 +1,29 @@
+version: "3.4"
+
+services:
+
+  codebox_server_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile_server
+      target: build
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - YOUR_MNT_PATH:/codebox
+    expose:
+      - "5002"
+    ports:
+      - "5002:5002"
+    entrypoint: uvicorn main:app --host 0.0.0.0 --port 5002 --reload
+    stdin_open: true
+    tty: true
+
+    environment:
+      - ENV_FLAG=DEV
+      - CODEBOX_ROOT_PATH=YOUR_MNT_PATH
+    networks:
+      - network_for_codebox
+      
+networks:
+    network_for_codebox:
