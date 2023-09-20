@@ -1,6 +1,6 @@
 # Codeinterpreter-Codebox
 
-This is Codeinterpreter-codebox, a cloud service for executing Code Interpreter code.
+Welcome to Codeinterpreter-codebox, a cutting-edge cloud service tailored for executing Code Interpreter code.
 
 ## 📜 Table of Contents
 - [🎯 Key Features](#-key-features)
@@ -42,17 +42,19 @@ session.close()
 2. [open-interpreter](https://github.com/KillianLucas/open-interpreter) 
 3. [E2B](https://github.com/e2b-dev/e2b) 
 
-| Feature/Project | [Codeinterpreter-Codebox](https://github.com/zhangzhejian/codeinterpreter-codebox) | [Code Interpreter api](https://github.com/shroominic/codeinterpreter-api) | [open-interpreter](https://github.com/KillianLucas/open-interpreter) | [E2B](https://github.com/e2b-dev/e2b) |
+| Feature/Project | [Codeinterpreter-Codebox★](https://github.com/zhangzhejian/codeinterpreter-codebox) | [Code Interpreter api](https://github.com/shroominic/codeinterpreter-api) | [open-interpreter](https://github.com/KillianLucas/open-interpreter) | [E2B](https://github.com/e2b-dev/e2b) |
 |---|---|---|---|---|
 | **Private Commercial Deployment** | ✅ | ❌ | ❌| ❌ |
 | **Remote Invocation** | ✅ |✅ | ❌ | ✅ |
 | **Fully Open Source** | ✅ | ❌ | ✅ | ❌ |
 | **Free of Charge** | ✅ | ❌ | ✅ | ❌ |
-| **Custom Modifications** | ✅ | ❌ | ❌| ❌ |
+| **Customization** | ✅ | ❌ | ❌| ❌ |
 | **Information Security** | ✅ | ❌ | ✅ | ❌ |
-| **Supports Multiple Programming Languages** | ❌ | ❌ | ✅ | ✅ |
-| **Supports Local Execution** | ✅ | ✅ | ✅ | ❌ |
-| **Direct Invocation Without Deployment** | ❌ | ✅ | ✅ | ✅ |
+| **Multiple Programming Languages** | ❌ | ❌ | ✅ | ✅ |
+| **Local Execution** | ✅ | ✅ | ✅ | ❌ |
+| **Direct Invocation w/o Deployment** | ❌ | ✅ | ✅ | ✅ |
+
+★ Indicates our project
 
 ## 💻 Sample Codes
 1. **Server-Client Interaction**: [jupyter server communicate](./examples/jupyter/jupyter_api_test.ipynb) showcases the details of interaction between the server and the Jupyter container.
@@ -78,9 +80,8 @@ finally:
 session.close()
 ```
 
-
 ## 📦 Deployment
-In [docker compose](./app/docker_dev.yml), replace 'CODEBOX_ROOT_PATH' and 'YOUR_MNT_PATH:/codebox' with your own file path for 'YOUR_MNT_PATH' to mount.
+Head over to [docker compose](./app/docker_dev.yml) and substitute 'CODEBOX_ROOT_PATH' and 'YOUR_MNT_PATH:/codebox' with your file path to mount 'YOUR_MNT_PATH'.
 
 ## 📧 Contact
 WeChat: zjajzzj1996  
