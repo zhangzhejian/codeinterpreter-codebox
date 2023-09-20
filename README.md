@@ -2,7 +2,16 @@
 
 This is Codeinterpreter-codebox, a cloud service for executing Code Interpreter code.
 
-# Features
+## 📜 Table of Contents
+- [🎯 Key Features](#-key-features)
+- [💡 What Can You Do?](#-what-can-you-do)
+- [📋 Related Projects & Their Differences](#-related-projects--their-differences)
+- [💻 Sample Codes](#-sample-codes)
+- [📦 Deployment](#-deployment)
+- [📧 Contact](#-contact)
+
+## 🎯 Key Features
+
 1. 🐍 **Independent Jupyter Sandbox Environment**  
 A completely isolated Jupyter sandbox environment that supports state-preserving code execution. Supports file uploads and downloads.
 2. 🐳 **Dockerized One-click Deployment**  
@@ -12,7 +21,7 @@ Supports completely private deployments without the need to upload files to exte
 5. 🚀 **More Flexible**  
 Supports the opening of more ports to achieve more custom functionality requirements, such as: connecting to databases, connecting to the internet, connecting to other servers.
 
-## Function Descriptions
+## 💡 What Can You Do?
 1. Execute Python code.
 2. Supports reading of uploaded files ([Upload and Analyze Files](./examples/client/codeinterpreter_session.py)).  
 ```
@@ -28,7 +37,7 @@ session.close()
 4. Supports dynamic scaling for commercial deployments.
 5. Supports custom feature modifications, open ports, network connections, etc., supports web crawlers.
 
-## Related Projects and Differences
+## 📋 Related Projects & Their Differences
 1. [Code Interpreter api](https://github.com/shroominic/codeinterpreter-api)
 2. [open-interpreter](https://github.com/KillianLucas/open-interpreter) 
 3. [E2B](https://github.com/e2b-dev/e2b) 
@@ -45,9 +54,9 @@ session.close()
 | **Supports Local Execution** | ✅ | ✅ | ✅ | ❌ |
 | **Direct Invocation Without Deployment** | ❌ | ✅ | ✅ | ✅ |
 
-## Code Examples
-1. [jupyter server communicate](./examples/jupyter/jupyter_api_test.ipynb) showcases the details of interaction between the server and the Jupyter container.
-2. [jupyter call](./examples/jupyter/execute_dynamic_code.ipynb) demonstrates how to invoke a web service via an HTTP request, execute code, and retrieve results. 
+## 💻 Sample Codes
+1. **Server-Client Interaction**: [jupyter server communicate](./examples/jupyter/jupyter_api_test.ipynb) showcases the details of interaction between the server and the Jupyter container.
+2. **Remote Execution**: [jupyter call](./examples/jupyter/execute_dynamic_code.ipynb) demonstrates how to invoke a web service via an HTTP request, execute code, and retrieve results. 
 ```
 test_code="""
 import docker
@@ -59,7 +68,7 @@ execute(test_code)
 #output
 Execute Result= {"output_type":"text/plain","content":"6.1.3\n","files":null}
 ```
-3. [client session invocation](./examples/client/codeinterpreter_session.py) shows how to allow LLM to invoke and execute code in a project through session and HTTP request.
+3. **Client Session Demonstration**: [client session invocation](./examples/client/codeinterpreter_session.py) shows how to allow LLM to invoke and execute code in a project through session and HTTP request.
 ```
 session=CodeinterpreterSession()
 try:
@@ -70,9 +79,9 @@ session.close()
 ```
 
 
-## Deployment
+## 📦 Deployment
 In [docker compose](./app/docker_dev.yml), replace 'CODEBOX_ROOT_PATH' and 'YOUR_MNT_PATH:/codebox' with your own file path for 'YOUR_MNT_PATH' to mount.
 
-## Contact
+## 📧 Contact
 WeChat: zjajzzj1996  
 Email: [zhangzhehian@gmail.com](zhangzhehian@gmail.com)
