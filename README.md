@@ -24,7 +24,7 @@ Supports the opening of more ports to achieve more custom functionality requirem
 ## 💡 What Can You Do?
 1. Execute Python code.
 2. Supports reading of uploaded files ([Upload and Analyze Files](./examples/client/codeinterpreter_session.py)).  
-```
+```python
 if name=='main':
 session=CodeinterpreterSession()
 try:
@@ -59,7 +59,7 @@ session.close()
 ## 💻 Sample Codes
 1. **Server-Client Interaction**: [jupyter server communicate](./examples/jupyter/jupyter_api_test.ipynb) showcases the details of interaction between the server and the Jupyter container.
 2. **Remote Execution**: [jupyter call](./examples/jupyter/execute_dynamic_code.ipynb) demonstrates how to invoke a web service via an HTTP request, execute code, and retrieve results. 
-```
+```python
 test_code="""
 import docker
 print(docker.version)
@@ -71,7 +71,7 @@ execute(test_code)
 Execute Result= {"output_type":"text/plain","content":"6.1.3\n","files":null}
 ```
 3. **Client Session Demonstration**: [client session invocation](./examples/client/codeinterpreter_session.py) shows how to allow LLM to invoke and execute code in a project through session and HTTP request.
-```
+```python
 session=CodeinterpreterSession()
 try:
 session.upload_files(['./../data/test_data.csv'])
@@ -81,7 +81,28 @@ session.close()
 ```
 
 ## 📦 Deployment
+1. **Install Docker**  
+Linux: Install Docker by terminal  
+Mac os: Install Docker desktop for mac  
+Windows: Install Docker desktop for windows
+2. **Modify Docker config file**  
 Head over to [docker compose](./app/docker_dev.yml) and substitute 'CODEBOX_ROOT_PATH' and 'YOUR_MNT_PATH:/codebox' with your file path to mount 'YOUR_MNT_PATH'.
+3. **Launch server**
+- Build custom jupyter image
+```shell
+cd docker
+docker build -t scipy-notebook:custom -f Dockerfile .
+```
+- Build web server image
+```shell
+cd app
+docker-compose -f docker_dev.yml build
+```
+- Launch server
+```shell
+docker-compose -f docker_dev.yml up
+```
+
 
 ## 📧 Contact
 WeChat: zjajzzj1996  

@@ -17,7 +17,7 @@
 ## 功能描述
 1. 执行python代码
 2. 支持上传文件的读取([上传文件并分析](./examples/client/codeinterpreter_session.py))  
-```
+```python
 if __name__=='__main__':
     session=CodeinterpreterSession()
     try:
@@ -54,7 +54,7 @@ if __name__=='__main__':
 
 1. [jupyter server communicate](./examples/jupyter/jupyter_api_test.ipynb) 中展示了server和jupyter container交互的细节 
 2. [jupyter 调用](./examples/jupyter/execute_dynamic_code.ipynb)中展示了如何通过http request的方式调用web服务，执行代码获取结果 
-```
+```python
 test_code="""
 import docker
 print(docker.__version__)
@@ -67,7 +67,7 @@ execute(test_code)
 Execute Result= {"output_type":"text/plain","content":"6.1.3\n","files":null}
 ```
 3. [client session调用](./examples/client/codeinterpreter_session.py)中展示了在项目中如何以session和http request的方式让LLM调用执行代码。  
-```
+```python
 session=CodeinterpreterSession()
 try:
     session.upload_files(['./../data/test_data.csv'])
@@ -77,8 +77,27 @@ finally:
 ```
 
 ## 部署
-[docker compose](./app/docker_dev.yml)中使用自己的文件路径替代'CODEBOX_ROOT_PATH'和 'YOUR_MNT_PATH:/codebox' 中的'YOUR_MNT_PATH'来挂载自己的文件路径
-
+1. **Install Docker**  
+Linux: Install Docker by terminal  
+Mac os: Install Docker desktop for mac  
+Windows: Install Docker desktop for windows
+2. **Modify Docker config file**  
+Head over to [docker compose](./app/docker_dev.yml) and substitute 'CODEBOX_ROOT_PATH' and 'YOUR_MNT_PATH:/codebox' with your file path to mount 'YOUR_MNT_PATH'.
+3. **Launch server**
+- Build custom jupyter image
+```shell
+cd docker
+docker build -t scipy-notebook:custom -f Dockerfile .
+```
+- Build web server image
+```shell
+cd app
+docker-compose -f docker_dev.yml build
+```
+- Launch server
+```shell
+docker-compose -f docker_dev.yml up
+```
 
 ## 联系方式
 微信:zjajzzj1996  
